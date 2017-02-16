@@ -15,9 +15,7 @@ class CustomCheckbox extends HTMLElement {
                 margin: 2px;
                 background: #fcfff4;
                 background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-                box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
-                // display:inline-block;
-                // background-color:#989;
+                box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);               
             }
             .chk-ctx label {
                 width: 20px;
