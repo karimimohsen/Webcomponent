@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <script src='CustomCheckbox.js'></script>
+</head>
+
+<body style="background-color: #3498db">
+    <h3>Custom Checkbox</h3>
+    <br>
+    <script>
+        // register custome progress bar 
+        customElements.define('custom-checkbox', CustomCheckbox, { extends: 'input' });
+
+
+        // init and set value
+        let chk = new CustomCheckbox();
+        chk.checked = false;
+
+
+        // add to dom and update
+        let body = document.body.appendChild(chk);
+    </script>
+</body>
+
+</html>
