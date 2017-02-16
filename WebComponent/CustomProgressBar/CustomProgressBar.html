@@ -7,7 +7,8 @@
 </head>
 
 <body>
-    <h3>Mohsen karimi</h3>
+    <h3>Custome ProgressBar</h3>
+    <br>
     <script>
         customElements.define('custom-progress-bar', CustomProgressBar);
 
@@ -15,7 +16,7 @@
         setInterval(function () {
             var currentValue = parseInt(progressBar.progress);
             if (currentValue < 100) {
-                progressBar.progress = currentValue + 10 > 100 ? 100 : currentValue + 7;
+                progressBar.progress = currentValue + 7 > 100 ? 100 : currentValue + 7;
             }
         }, 500);
         var body = document.querySelector("body");

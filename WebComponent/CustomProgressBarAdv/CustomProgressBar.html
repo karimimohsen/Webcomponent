@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <script src='CustomProgressBar.js'></script>
+
+
+</head>
+
+<body>
+    <h3>Custome ProgressBar with attribute</h3>
+    <br>
+    <script>
+        // register custome progress bar 
+        customElements.define('custom-progress-bar', CustomProgressBar);
+
+
+        // init and set value
+        var progressBar = new CustomProgressBar();
+        progressBar.setAttribute('value', '0');
+
+
+        // add to dom and update
+        var body = document.querySelector("body");
+        body.appendChild(progressBar);
+
+
+        setInterval(function () {
+            var currentValue = parseInt(progressBar.getAttribute('value'));
+            if (currentValue < 100) {
+                progressBar.setAttribute('value', currentValue + 7 > 100 ? 100 : currentValue + 7);
+            }
+        }, 500);
+    </script>
+</body>
+
+</html>
